@@ -11,8 +11,6 @@ Project made for job interview made with pure HTML/CSS/JS and Springboot framewo
 
 ## Lessons Learned
 
-What did you learn while building this project? What challenges did you face and how did you overcome them?
-
 - #### Java Language & Web Back-end
     It was the first contact with a such heavy OOP Language like Java and also with the web back-end structure. Was forced to learn concepts as SOLID, Inheritance, Superclasses, etc ASAP to deliver the project in this functional state.
 
