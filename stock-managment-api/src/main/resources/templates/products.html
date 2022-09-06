@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,145 +14,21 @@
     <title>Panel</title>
 </head>
 <body>
-    <main>
-
-        <!-- Header Sidebar -->
-
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <div class="sidebar-logo-container">
-                    <div class="logo-container">
-                        <img class="logo-sidebar" src="/assets/images/pet-logo-svg.svg">
-                    </div>
-                    <div class="brand-name-container">
-                        <p class="brand-name">
-                            Inventory CRUD <br>
-                            <span class="brand-subtitle">
-                                <i class="fa-solid fa-table-columns"></i> Panel
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sidebar Body -->
-
-            <div class="sidebar-body">
-                <ul class="navigation-list">
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="">
-                            <div class="row">
-                                <div class="col-2">
-                                    <i class="fa-solid fa-gauge-high"></i>
-                                </div>
-                                <div class="col-10">Dashboard</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="">
-                            <div class="row">
-                                <div class="col-2">
-                                    <i class="fa-solid fa-tags"></i>
-                                </div>
-                                <div class="col-10">
-                                    Brands
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="">
-                            <div class="row">
-                                <div class="col-2">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </div>
-                                <div class="col-10">
-                                    Products
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="">
-                            <div class="row">
-                                <div class="col-2">
-                                    <i class="fa-solid fa-dollar-sign"></i>
-                                </div>
-                                <div class="col-10">
-                                    Orders
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="">
-                            <div class="row">
-                                <div class="col-2">
-                                    <i class="fa-solid fa-user"></i>
-                                </div>
-                                <div class="col-10">
-                                    Profile
-                                </div>
-                            </div> 
-                        </a>
-                    </li>
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="">
-                            <div class="row">
-                                <div class="col-2">
-                                    <i class="fa-solid fa-right-from-bracket"></i>
-                                </div>
-                                <div class="col-10">
-                                    Logout
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <hr style="margin: 0 auto; margin-top: 30px; color:white; width:80% ;">
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="navigationBar">
-                <button id="sidebarToggle" class="sidebarToggle">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-            <div class="table-content">
-                <div class="container">
-                    <div class="row">
-                        <table class="table table-striped table-striped-columns w-100">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Age</th>
-                                    <th scope="col">Guardian</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="align-center vertical">
-                                <td>Montanha</td>
-                                <td>01</td>
-                                <td>Silvio</td>
-                                <td class="text-center"><a href="#" class="btn btn-primary">
-                                    <div class="row flex-row">
-                                        <div class="col-2">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </div>
-                                        <div class="col-8">
-                                            Update
-                                        </div>
-                                    </div>
-                                </a></td>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src="/assets/js/sidebar.js"></script>
+	<table>
+		<thead>
+			<tr>	
+				<th scope="col">ID</th>
+				<th scope="col">Name</th>
+				<th scope="col">Status</th>
+				<th scope="col">Stock</th>
+			</tr>
+		</thead>
+		<tbody id="table-fetch">
+			
+			<!--<tr th:each "product: ${products}">
+			<td th:each "product: ${products.id}"></td>-->
+			
+		</tbody>
+	</table>
+	<script src="/api-table.js"></script>
 </body>
-</html>

@@ -188,3 +188,7 @@ body.active main .content {
 .align-center.vertical {
     vertical-align: middle;
 }
+
+.separation {
+    height: 50px;
+}
