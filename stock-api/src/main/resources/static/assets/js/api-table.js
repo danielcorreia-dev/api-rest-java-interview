@@ -1,9 +1,10 @@
+const tableholder = document.querySelector("#data-output")
+
 fetch("http://localhost:8080/api/product")
 .then(function(response){
   return response.json();
 })
 .then(function(products){
-  let tableholder = document.querySelector("#data-output")
   let out = ""
   for(let product of products){
     out += `
@@ -12,8 +13,8 @@ fetch("http://localhost:8080/api/product")
         <td>${product.name}</td>
         <td>${product.status}</td>
         <td>${product.stock}</td>
-        <td class = "text-center">
-        <a href="#" class="btn btn-primary">
+        <td class="text-center" data-id=${product.id}>
+        <a href="#" class="btn btn-primary ms-2">
             <div class="row flex-row">
                 <div class="col-2">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -23,21 +24,31 @@ fetch("http://localhost:8080/api/product")
                 </div>
             </div>
      	</a>
-     	<button onclick="deleteProduct()" value="${product.id}" class="btn btn-danger" id="delete">
+     	<a href="#" class="btn btn-danger" id="delete">
      		<i class="fa-solid fa-trash-can"></i>
-     	</button>
+     	</a>
      	</td>
       </tr>
     `
   }
 
+
   tableholder.innerHTML = out;
 })
 
-function deleteProduct(product) {
-	let element = document.getElementById("delete")
-	element.addEventListener("click", fetch("http://localhost:8080/api/product/" + product),{
-		method: 'DELETE'
-	})
-	.then(response => response.json());
-}
+const url = "http://localhost:8080/api/product"
+
+tableholder.addEventListener('click', (e) => {
+	e.preventDefault();
+	let deletePress = e.target.id == "delete"
+	
+	let id = e.target.parentElement.dataset.id
+	if(deletePress) {
+		fetch(`${url}/${id}`, {
+			method: "DELETE",
+			redirect: 'follow'
+		})
+		.then(() => window.location.reload(true))
+	}
+});
+
