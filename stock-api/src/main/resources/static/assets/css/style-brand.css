@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #242423;
+    background-color: #082541;
 }
 
 * {
@@ -27,7 +27,7 @@ body {
 main .sidebar {
     height: 100vh;
     width: 300px;
-    background-color: #242423;
+    background-color: #0D3B66;
     top: 0;
     left: 0;
     position: fixed;
@@ -132,11 +132,11 @@ body.active main .content {
 }
 
 .navigation-list-item:hover .navigation-link{
-    color: #F5CB5C;
+    color: #EE964B;
 }
 
 .navigation-list-item.active .navigation-link{
-    color: #F5CB5C;
+    color: #e7ac79;
     font-weight: 500;
 }
 
@@ -159,7 +159,7 @@ body.active main .content {
     z-index: 99;
     border-radius: 50px;
     border: none;
-    transition: all ease .1s;
+    transition: all ease .4s;
     /* outline: none !important; */
 }
 
@@ -175,7 +175,7 @@ body.active main .content {
 
 .table-content {
     display: flex;
-    padding: 30px 80px;
+    padding: 80px 80px;
     justify-content: center;
     align-items: center;
     height: auto;

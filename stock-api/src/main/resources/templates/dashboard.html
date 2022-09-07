@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d3c93b69a1.js" crossorigin="anonymous"></script>
     <!--  Style CSS-->
-    <link rel="stylesheet" href="/assets/css/style-panel.css">
+    <link rel="stylesheet" href="/assets/css/style-dashboard.css">
     <title>Panel</title>
 </head>
 <body>
@@ -110,7 +110,53 @@
             </div>
 			<div class="container separation">
             </div>
-	</main>
-	<script src="/assets/js/sidebar.js"></script>
+            <div class="container-lg d-lg-flex justify-content-evenly header-content mb-lg-5">
+                <div class="row">
+                    <div class="col mb-2">
+                        <a href="/products">
+                            <div class="box products">
+                                <h2>Products</h2>
+                                <img src="/assets/images/box-icon.svg" class="bluephoto">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col mb-2">
+                        <a href="/brands">
+                            <div class="box">
+                                <h2>Brands</h2>
+                                <img src="/assets/images/tag-icon.svg" class="bluephoto brand">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col mb-2">
+                        <a href="/index">
+                            <div class="box">
+                                <h2>Log-out</h2>
+                                <img src="/assets/images/logout-icon.svg" class="bluephoto logout">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-lg rounded p-4 bg-container">
+                <h3 class="mb-3">Last Product</h3>
+                <div class="row-cols-3 d-flex align-items-center">
+                    <div class="col p-2" id="name">
+                     
+                    </div>
+                    <div class="col p-2" id="stock">
+                      
+                    </div>
+                    <div class="col p-2" id="status">
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="/assets/js/dashboard.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/api-table.js"></script>
 </body>
-</html>	
+</html>

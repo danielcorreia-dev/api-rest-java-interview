@@ -23,6 +23,9 @@ fetch("http://localhost:8080/api/product")
                 </div>
             </div>
      	</a>
+     	<button onclick="deleteProduct()" value="${product.id}" class="btn btn-danger" id="delete">
+     		<i class="fa-solid fa-trash-can"></i>
+     	</button>
      	</td>
       </tr>
     `
@@ -30,3 +33,11 @@ fetch("http://localhost:8080/api/product")
 
   tableholder.innerHTML = out;
 })
+
+function deleteProduct(product) {
+	let element = document.getElementById("delete")
+	element.addEventListener("click", fetch("http://localhost:8080/api/product/" + product),{
+		method: 'DELETE'
+	})
+	.then(response => response.json());
+}

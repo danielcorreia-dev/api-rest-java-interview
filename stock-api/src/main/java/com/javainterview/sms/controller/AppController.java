@@ -22,4 +22,9 @@ public class AppController {
 	public String goDashboard() {
 		return "dashboard";
 	}
+	
+	@GetMapping("/products/new")
+	public String newProduct() {
+		return "new-product";
+	}
 }
