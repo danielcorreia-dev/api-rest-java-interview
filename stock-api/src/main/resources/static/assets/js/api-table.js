@@ -14,7 +14,7 @@ fetch("http://localhost:8080/api/product")
         <td>${product.status}</td>
         <td>${product.stock}</td>
         <td class="text-center" data-id=${product.id}>
-        <a href="#" class="btn btn-primary ms-2">
+        <a href="#" class="btn btn-primary ms-3">
             <div class="row flex-row">
                 <div class="col-2">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -32,11 +32,12 @@ fetch("http://localhost:8080/api/product")
     `
   }
 
-
   tableholder.innerHTML = out;
 })
 
 const url = "http://localhost:8080/api/product"
+
+// DELETE Method function using the data-set from parent element <td>
 
 tableholder.addEventListener('click', (e) => {
 	e.preventDefault();
