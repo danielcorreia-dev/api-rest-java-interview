@@ -23,6 +23,26 @@ public class AppController {
 		return "dashboard";
 	}
 	
+	@GetMapping("/brands")
+	public String goBrands() {
+		return "brands";
+	}
+	
+	@GetMapping("/brands/new")
+	public String newBrands() {
+		return "new-brand";
+	}
+	
+	@GetMapping("/orders")
+	public String goOrder() {
+		return "orders";
+	}
+	
+	@GetMapping("/orders/new")
+	public String newOrder() {
+		return "new-order";
+	}
+	
 	@GetMapping("/products/new")
 	public String newProduct() {
 		return "new-product";
