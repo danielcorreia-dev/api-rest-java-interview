@@ -101,8 +101,10 @@
                 <hr style="margin: 0 auto; margin-top: 30px; color:white; width:80% ;">
             </div>
         </div>
-
-        <div class="content">
+			
+			<!-- Content -->
+			
+       <div class="content">
             <div class="navigationBar">
                 <button id="sidebarToggle" class="sidebarToggle">
                     <i class="fa-solid fa-bars"></i>
@@ -115,8 +117,38 @@
                     <h1>Products</h1>
                 </div>
             </div>
-            <div class="table-content">
+            <div class="table-content position-relative">
                 <div class="container">
+                	<div id="pop-update" class="position-absolute w-auto rounded-4 p-5 overflow-hidden d-flex justify-content-center h-auto" style="visibility: hidden;">
+						<div class="x-icon p-3 position-absolute start-0 top-0" style="color: red;">
+                            <button id="close-pop" type="button" ><i class="fa-solid fa-xmark" style="cursor: pointer;" ></i></button>
+                        </div>
+                        <form class="add-product">
+                            <h2 class="mb-3">Update Product</h2>
+                            <div class="row mb-3">
+                                <label for="inputName" class="col-sm-2 col-form-label">Product's Name</label>
+                                <div class="col-sm-8 p-2">
+                                <input type="text" class="form-control ms-3" id="inputName">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputStock" class="col-sm-2 col-form-label">Stock</label>
+                                <div class="col-sm-8 p-2">
+                                <input type="text" class="form-control ms-3" id="inputStock">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">Status</label>
+                                <select id="inputState" class="form-select">
+                                <option selected></option>
+                                <option>Blocked</option>
+                                <option>On going</option>
+                                <option>Waiting</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Update</button>
+                        </form>
+                    </div>
             	<a href="/products/new" class="btn btn-primary mb-3">Add Product</a>
                     <div class="row">
                         <table class="table table-striped table-striped-columns w-100">
@@ -130,7 +162,6 @@
                             		<th> Action </th>
                             	</tr>
                             <tbody class="align-center vertical" id="data-output">
-                            	
                             </tbody>
                         </table>
                     </div>

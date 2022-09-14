@@ -192,3 +192,11 @@ body.active main .content {
 .separation {
     height: 50px;
 }
+
+#pop-update {
+    left: 35%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 5px #0000004f;
+}

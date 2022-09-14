@@ -13,7 +13,7 @@ fetch("http://localhost:8080/api/order")
         <td>${product.delivery}</td>
         <td class="text-center" data-id=${product.id}>
         <a href="#" class="btn btn-primary ms-3">
-            <div class="row flex-row">
+            <div class="row flex-row" id="update">
                 <div class="col-2">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </div>
@@ -51,3 +51,16 @@ tableholder.addEventListener('click', (e) => {
 	}
 });
 
+tableholder.addEventListener('click', (event) => {
+	event.preventDefault();
+	let updatePress = event.target.id == "update"
+	let id = event.target.parentElement.dataset.id
+	let formUpdate = document.getElementById("pop-update")
+	let closeUpdate = document.getElementById("close-pop")
+	
+	if(updatePress) {
+		if(closeUpdate.addEventListener('click', () => closeUpdate.style.visibility = 'hidden'))
+		formUpdate.style.visibility = "visible"
+		
+	}
+});

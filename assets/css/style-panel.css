@@ -189,4 +189,10 @@ body.active main .content {
     vertical-align: middle;
 }
 
-
+#pop-update {
+    left: 25%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 5px #0000004f;
+}
